@@ -53,7 +53,7 @@ write_policy() {
   sudo /usr/libexec/PlistBuddy -c "Set :$key $val" /Library/Managed\ Preferences/$BRAVE_BUNDLE.plist 2>/dev/null || true
 }
 
-sudo touch "/Library/Managed Preferences/$BRAVE_BUNDLE.plist"
+#sudo touch "/Library/Managed Preferences/$BRAVE_BUNDLE.plist"
 sudo /usr/libexec/PlistBuddy -c "Save" /Library/Managed\ Preferences/$BRAVE_BUNDLE.plist 2>/dev/null || true
 
 write_policy "BraveRewardsDisabled"       bool  true
@@ -69,7 +69,7 @@ write_policy "BravePlaylistEnabled"       bool  false
 write_policy "BraveP3AEnabled"            bool  false
 write_policy "BraveStatsPingEnabled"      bool  false
 write_policy "BraveWebDiscoveryEnabled"   bool  false
-write_policy "SyncDisabled"               bool  true
+write_policy "SyncDisabled"               bool  false
 write_policy "BackgroundModeEnabled"      bool  false
 write_policy "MetricsReportingEnabled"    bool  false
 write_policy "ComponentUpdatesEnabled"    bool  true
